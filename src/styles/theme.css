@@ -1,0 +1,35 @@
+:root {
+  color-scheme: light;
+  --brand: 28 7 112;
+  --primary: 10 124 110;
+  --secondary: 217 34 67;
+  --bg: 248 250 252;
+  --surface: 249 250 251;
+  --icon: 107 114 128;
+  --text-primary: 32 41 64;
+  --text-secondary: 75 85 99;
+  --text-body: 55 65 81;
+  --text-muted: 156 163 175;
+  --text-disabled: 209 213 219;
+  --divider: 207 216 220;
+  --input-field: 243 244 246;
+  /* --input-border: 209 213 219; original */
+  --input-border: 28 7 112;
+  --input-text: 32 41 64;
+  --input-placeholder: 156 163 175;
+  --btn-bg: 99 102 241;
+  --btn-text: 248 250 252;
+  --btn-border: 99 102 241;
+  --btn-hover: 81 83 230;
+  --btn-active: 81 83 230;
+  --card-bg: 229 231 235;
+  --card-border: 207 216 220;
+  --card-hover: 249 250 251;
+  --accent: 245 158 11;
+  --danger: 220 38 38;
+  --warning: 245 158 11;
+  --error: 239 68 68;
+  --success: 16 185 129;
+  --pending: 245 158 11;
+  --progress: 37 99 235;
+}

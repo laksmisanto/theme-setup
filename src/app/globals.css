@@ -1,26 +1,128 @@
 @import "tailwindcss";
 
+/* @import "../styles/theme.css";
+@import "../styles/light.css";
+@import "../styles/dark.css"; */
+/* @import "../styles/components.css"; */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --brand: oklch(24.78% 0.126 279.74);
+  --primary: oklch(45.54% 0.101 176.62);
+  --secondary: oklch(54.49% 0.222 23.36);
+  --bg: oklch(98.3% 0.005 235.66);
+  --surface: oklch(98.48% 0.004 247.86);
+  --icon: oklch(54.12% 0.021 262.88);
+  --text-primary: oklch(27.48% 0.027 259.62);
+  --text-secondary: oklch(43.89% 0.021 262.88);
+  --text-body: oklch(36.19% 0.022 262.88);
+  --text-muted: oklch(72.07% 0.015 259.69);
+  --text-disabled: oklch(87.05% 0.011 259.71);
+  --divider: oklch(88.08% 0.016 235.4);
+  --input-field: oklch(96.7% 0.007 247.84);
+  --input-border: oklch(88.08% 0.016 235.4);
+  --input-text: oklch(27.48% 0.027 259.62);
+  --input-placeholder: oklch(72.07% 0.015 259.69);
+  --btn-bg: oklch(58.33% 0.183 268.04);
+  --btn-text: oklch(98.3% 0.005 235.66);
+  --btn-border: oklch(58.33% 0.183 268.04);
+  --btn-hover: oklch(51.81% 0.2 271.74);
+  --btn-active: oklch(51.81% 0.2 271.74);
+  --card-bg: oklch(92.42% 0.009 255.43);
+  --card-border: oklch(88.08% 0.016 235.4);
+  --card-hover: oklch(98.48% 0.004 247.86);
+  --accent: oklch(76.91% 0.176 72.82);
+  --danger: oklch(54.67% 0.211 25.85);
+  --warning: oklch(76.91% 0.176 72.82);
+  --error: oklch(62.77% 0.194 25.1);
+  --success: oklch(70.47% 0.165 174.61);
+  --pending: oklch(76.91% 0.176 72.82);
+  --progress: oklch(53.48% 0.183 259.04);
 }
 
+.dark {
+  --brand: oklch(72.1% 0.134 265.51);
+  --primary: oklch(73.55% 0.135 186.23);
+  --secondary: oklch(71.93% 0.155 19.34);
+  --bg: oklch(23.23% 0.05 258.55);
+  --surface: oklch(31.81% 0.046 256.46);
+  --icon: oklch(71.05% 0.026 254.61);
+  --text-primary: oklch(98.3% 0.005 235.66);
+  --text-secondary: oklch(86.53% 0.019 253.94);
+  --text-body: oklch(91.73% 0.014 251.24);
+  --text-muted: oklch(55.22% 0.031 254.51);
+  --text-disabled: oklch(44.38% 0.033 255.8);
+  --divider: oklch(37.66% 0.035 257.01);
+  --input-field: oklch(31.81% 0.046 256.46);
+  --input-border: oklch(37.66% 0.035 257.01);
+  --input-text: oklch(98.3% 0.005 235.66);
+  --input-placeholder: oklch(55.22% 0.031 254.51);
+  --btn-bg: oklch(58.33% 0.183 268.04);
+  --btn-text: oklch(100% 0 0);
+  --btn-border: oklch(58.33% 0.183 268.04);
+  --btn-hover: oklch(72.1% 0.134 265.51);
+  --btn-active: oklch(72.1% 0.134 265.51);
+  --card-bg: oklch(31.81% 0.046 256.46);
+  --card-border: oklch(37.66% 0.035 257.01);
+  --card-hover: oklch(37.66% 0.035 257.01);
+  --accent: oklch(84.45% 0.17 76.57);
+  --danger: oklch(62.77% 0.194 25.1);
+  --warning: oklch(84.45% 0.17 76.57);
+  --error: oklch(71.93% 0.155 19.34);
+  --success: oklch(81.93% 0.134 178.61);
+  --pending: oklch(84.45% 0.17 76.57);
+  --progress: oklch(70.9% 0.141 250.77);
+}
+/*/ initial values for light theme, will be overridden by .dark class when dark mode is active
+============
+when you write styles, use the -- variables instead of the --*-light variables, so that they will automatically adapt to dark mode when the .dark class is applied to the root element.
+for example, instead of using var(--primary-light), use var(--primary) in your styles. This way, when the .dark class is applied, the --primary variable will be overridden with the dark theme value, and your styles will automatically adapt to the dark mode without needing to change any of your CSS.
+formated as a comment to avoid being included in the final CSS output, but serves as a guide for how to use the theme variables correctly.
+--variablesName:var(--variableName) -- IGNORE --
+*/
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand: var(--brand);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-icon: var(--icon);
+  --color-textPrimary: var(--text-primary);
+  --color-textSecondary: var(--text-secondary);
+  --color-textBody: var(--text-body);
+  --color-textMuted: var(--text-muted);
+  --color-textDisabled: var(--text-disabled);
+  --color-divider: var(--divider);
+  --color-inputField: var(--input-field);
+  --color-inputBorder: var(--input-border);
+  --color-inputText: var(--input-text);
+  --color-inputPlaceholder: var(--input-placeholder);
+  --color-btnBg: var(--btn-bg);
+  --color-btnText: var(--btn-text);
+  --color-btnBorder: var(--btn-border);
+  --color-btnHover: var(--btn-hover);
+  --color-btnActive: var(--btn-active);
+  --color-cardBg: var(--card-bg);
+  --color-cardBorder: var(--card-border);
+  --color-cardHover: var(--card-hover);
+  --color-accent: var(--accent);
+  --color-danger: var(--danger);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --color-success: var(--success);
+  --color-pending: var(--pending);
+  --color-progress: var(--progress);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base styles using the theme variables */
+@layer base {
+  body {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    transition:
+      color 200ms,
+      background-color 200ms;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }

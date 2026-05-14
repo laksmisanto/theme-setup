@@ -1,0 +1,35 @@
+.dark {
+  color-scheme: dark;
+  --brand: 129 140 248; /* Lightened for dark bg */
+  --primary: 20 184 166; /* Brighter teal */
+  --secondary: 248 113 113; /* Softer red */
+  --bg: 15 23 42; /* Deep slate blue */
+  --surface: 30 41 59; /* Lighter slate */
+  --icon: 148 163 184;
+  --text-primary: 248 250 252;
+  --text-secondary: 203 213 225;
+  --text-body: 226 232 240;
+  --text-muted: 100 116 139;
+  --text-disabled: 71 85 105;
+  --divider: 51 65 85;
+  --input-field: 30 41 59;
+  /* --input-border: 71 85 105; */
+  --input-border: 129 140 248; /* Lightened for dark bg */
+  --input-text: 248 250 252;
+  --input-placeholder: 100 116 139;
+  --btn-bg: 99 102 241;
+  --btn-text: 255 255 255;
+  --btn-border: 99 102 241;
+  --btn-hover: 129 140 248;
+  --btn-active: 129 140 248;
+  --card-bg: 30 41 59;
+  --card-border: 51 65 85;
+  --card-hover: 51 65 85;
+  --accent: 251 191 36;
+  --danger: 239 68 68;
+  --warning: 251 191 36;
+  --error: 248 113 113;
+  --success: 52 211 153;
+  --pending: 251 191 36;
+  --progress: 96 165 250;
+}
