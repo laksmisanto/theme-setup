@@ -3,13 +3,13 @@ import ThemeToggle from "@/components/theme/theme-toggle";
 export default function Home() {
   return (
     <>
-      <div className="bg-primary flex items-center justify-end p-4">
+      <div className="bg-secondary shadow shadow-shadow flex items-center justify-end p-4">
         <ThemeToggle />
       </div>
 
       <main className="bg-bg min-h-screen w-full p-10">
         {/* CARD */}
-        <div className="bg-cardBg p-6 max-w-md space-y-4 rounded-xl">
+        <div className="news-card p-6 max-w-md space-y-4 rounded-xl">
           <div>
             <span className="text-textPrimary text-sm">Technology</span>
 

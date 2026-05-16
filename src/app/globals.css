@@ -11,13 +11,13 @@
   --bg: oklch(98.46% 0.002 247.84);
   --surface: oklch(98.48% 0.004 247.86);
   --icon: oklch(54.12% 0.021 262.88);
-  --text-primary: oklch(27.48% 0.027 259.62);
+  --text-primary: oklch(27.515% 0.02681 260.031);
   --text-secondary: oklch(43.89% 0.021 262.88);
   --text-body: oklch(36.19% 0.022 262.88);
   --text-muted: oklch(72.07% 0.015 259.69);
   --text-disabled: oklch(87.05% 0.011 259.71);
   --divider: oklch(88.08% 0.016 235.4);
-  --input-field: oklch(96.7% 0.007 247.84);
+  --input-field: oklch(96.826% 0.00696 248.26);
   --input-border: oklch(88.08% 0.016 235.4);
   --input-text: oklch(27.48% 0.027 259.62);
   --input-placeholder: oklch(72.07% 0.015 259.69);
@@ -29,6 +29,7 @@
   --card-bg: oklch(100% 0 0);
   --card-border: oklch(88.08% 0.016 235.4);
   --card-hover: oklch(98.48% 0.004 247.86);
+  --shadow: oklch(93.705% 0.00011 271.152);
   --accent: oklch(76.91% 0.176 72.82);
   --danger: oklch(54.67% 0.211 25.85);
   --warning: oklch(76.91% 0.176 72.82);
@@ -41,8 +42,8 @@
 .dark {
   --brand: oklch(72.1% 0.134 265.51);
   --primary: oklch(57.983% 0.19688 25.846);
-  --secondary: oklch(71.93% 0.155 19.34);
-  --bg: oklch(21.01% 0.032 264.66);
+  --secondary: oklch(31.81% 0.046 256.46);
+  --bg: oklch(18.22% 0 0);
   --surface: oklch(31.81% 0.046 256.46);
   --icon: oklch(71.05% 0.026 254.61);
   --text-primary: oklch(98.3% 0.005 235.66);
@@ -60,9 +61,10 @@
   --btn-border: oklch(58.33% 0.183 268.04);
   --btn-hover: oklch(72.1% 0.134 265.51);
   --btn-active: oklch(72.1% 0.134 265.51);
-  --card-bg: oklch(22.979% 0.01072 260.717);
+  --card-bg: oklch(20.9% 0 0);
   --card-border: oklch(37.66% 0.035 257.01);
   --card-hover: oklch(37.66% 0.035 257.01);
+  --shadow: oklch(12.212% 0.00001 271.152);
   --accent: oklch(84.45% 0.17 76.57);
   --danger: oklch(62.77% 0.194 25.1);
   --warning: oklch(84.45% 0.17 76.57);
@@ -103,6 +105,7 @@ formated as a comment to avoid being included in the final CSS output, but serve
   --color-cardBg: var(--card-bg);
   --color-cardBorder: var(--card-border);
   --color-cardHover: var(--card-hover);
+  --color-shadow: var(--shadow);
   --color-accent: var(--accent);
   --color-danger: var(--danger);
   --color-warning: var(--warning);
@@ -176,18 +179,22 @@ html {
 
   /* Card Component */
   .news-card {
-    background-color: var(--color-card-bg);
-    border: 1px solid var(--color-card-border);
+    background-color: var(--color-cardBg);
+    /* border: 1px solid var(--color-cardBorder); */
     border-radius: 0.5rem;
     padding: 1.25rem;
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+    box-shadow:
+      0 1px 2px var(--shadow),
+      0 4px 12px var(--shadow);
     transition:
       transform 0.2s ease,
       box-shadow 0.2s ease;
 
     &:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      box-shadow:
+        0 4px 6px var(--shadow),
+        0 10px 20px var(--shadow);
     }
   }
 }
