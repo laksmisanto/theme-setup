@@ -1,9 +1,7 @@
 import "./globals.css";
 
 import ThemeProvider from "@/components/theme/theme-provider";
-// import ThemeScript from "@/components/theme/theme-script";
-
-import NewsWebsite from "../components/NewsWebsite";
+import ThemeScript from "@/components/theme/theme-script";
 
 export const metadata = {
   title: "News Website",
@@ -14,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        {/* <ThemeScript /> */}
+        <ThemeScript />
 
         <ThemeProvider>{children}</ThemeProvider>
       </body>
