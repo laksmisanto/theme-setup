@@ -3,6 +3,8 @@ import "./globals.css";
 import ThemeProvider from "@/components/theme/theme-provider";
 // import ThemeScript from "@/components/theme/theme-script";
 
+import NewsWebsite from "../components/NewsWebsite";
+
 export const metadata = {
   title: "News Website",
   description: "Professional news platform",

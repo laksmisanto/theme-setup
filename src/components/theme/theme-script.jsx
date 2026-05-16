@@ -1,3 +1,4 @@
+//theme-script.jsx
 export default function ThemeScript() {
   const script = `
     (function() {
@@ -17,4 +18,3 @@ export default function ThemeScript() {
     />
   );
 }
-

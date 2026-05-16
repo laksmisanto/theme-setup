@@ -6,9 +6,9 @@
 /* @import "../styles/components.css"; */
 :root {
   --brand: oklch(24.78% 0.126 279.74);
-  --primary: oklch(45.54% 0.101 176.62);
-  --secondary: oklch(54.49% 0.222 23.36);
-  --bg: oklch(98.3% 0.005 235.66);
+  --primary: oklch(57.71% 0.215 27.33);
+  --secondary: oklch(27.81% 0.03 256.85);
+  --bg: oklch(98.46% 0.002 247.84);
   --surface: oklch(98.48% 0.004 247.86);
   --icon: oklch(54.12% 0.021 262.88);
   --text-primary: oklch(27.48% 0.027 259.62);
@@ -26,7 +26,7 @@
   --btn-border: oklch(58.33% 0.183 268.04);
   --btn-hover: oklch(51.81% 0.2 271.74);
   --btn-active: oklch(51.81% 0.2 271.74);
-  --card-bg: oklch(92.42% 0.009 255.43);
+  --card-bg: oklch(100% 0 0);
   --card-border: oklch(88.08% 0.016 235.4);
   --card-hover: oklch(98.48% 0.004 247.86);
   --accent: oklch(76.91% 0.176 72.82);
@@ -40,9 +40,9 @@
 
 .dark {
   --brand: oklch(72.1% 0.134 265.51);
-  --primary: oklch(73.55% 0.135 186.23);
+  --primary: oklch(57.983% 0.19688 25.846);
   --secondary: oklch(71.93% 0.155 19.34);
-  --bg: oklch(23.23% 0.05 258.55);
+  --bg: oklch(21.01% 0.032 264.66);
   --surface: oklch(31.81% 0.046 256.46);
   --icon: oklch(71.05% 0.026 254.61);
   --text-primary: oklch(98.3% 0.005 235.66);
@@ -60,7 +60,7 @@
   --btn-border: oklch(58.33% 0.183 268.04);
   --btn-hover: oklch(72.1% 0.134 265.51);
   --btn-active: oklch(72.1% 0.134 265.51);
-  --card-bg: oklch(31.81% 0.046 256.46);
+  --card-bg: oklch(22.979% 0.01072 260.717);
   --card-border: oklch(37.66% 0.035 257.01);
   --card-hover: oklch(37.66% 0.035 257.01);
   --accent: oklch(84.45% 0.17 76.57);
@@ -124,5 +124,70 @@ html {
     transition:
       color 200ms,
       background-color 200ms;
+  }
+}
+
+/* 4. Reusable Custom Component Rules */
+@layer components {
+  /* Button Component */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    border: 1px solid var(--color-btn-border);
+    background-color: var(--color-btn-bg);
+    color: var(--color-btn-text);
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease-in-out,
+      border-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: var(--color-btn-hover);
+      border-color: var(--color-btn-hover);
+    }
+
+    &:active {
+      background-color: var(--color-btn-active);
+    }
+  }
+
+  /* Input Component */
+  .input-field {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    border: 1px solid var(--color-input-border);
+    background-color: var(--color-input-bg);
+    color: var(--color-input-text);
+    outline: none;
+    transition:
+      border-color 0.2s ease-in-out,
+      box-shadow 0.2s ease-in-out;
+
+    &:focus {
+      border-color: var(--color-input-focus);
+      box-shadow: 0 0 0 2px var(--color-input-focus);
+    }
+  }
+
+  /* Card Component */
+  .news-card {
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    }
   }
 }
